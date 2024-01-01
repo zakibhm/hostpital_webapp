@@ -1,0 +1,1 @@
+This is a web application leveraging Angular, Node.js, Express, and PostgreSQL to streamline doctor management within a hospital setting. It empowers users to effortlessly view, add, modify, and delete doctor records, ensuring efficient data maintenance
