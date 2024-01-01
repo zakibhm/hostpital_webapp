@@ -1,0 +1,18 @@
+<h2 class="mb-4">Delete Doctor Nº{{medecinId}}</h2>
+<div class="card">
+  <div class="card-body">
+    <p class="mb-4">Are you sure you want to delete this Doctor?</p>
+    <div class="row btn-container">
+      <div class="col-md-6">
+        <button class="btn btn-primary btn-delete"  (click)="deleteMedecin()">Delete</button>
+      </div>
+      <div class="col-md-6">
+        <button class="btn btn-danger" routerLink="/medecins">Cancel</button>
+      </div>
+    </div>
+    <mat-snack-bar *ngIf="isDeleted" [class.success-message]="isDeleted">Doctor deleted successfully!</mat-snack-bar>
+  </div>
+  
+</div>
+
+

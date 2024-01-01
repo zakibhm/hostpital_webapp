@@ -1,0 +1,105 @@
+<h2 class="mb-4">Add your Doctor</h2>
+<div class="card">
+  <div class="card-body">
+    <form 
+    (ngSubmit)="addMedecin()" 
+    class="row g-3"
+    #addForm="ngForm">
+
+      
+      <div class="col-md-6">
+        <label for="prenom" class="form-label">First Name</label>
+        <input type="text" name="prenom" [(ngModel)]="medecin.prenom" class="form-control" id="prenom" required #prenom="ngModel"
+        pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+" 
+        minlength="2" 
+        maxlength="30">
+        <!-- Error message -->
+        <div *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)" class="text-danger mt-1">
+          <div *ngIf="prenom.errors?.required">First Name is required.</div>
+          <div *ngIf="prenom.errors?.pattern">Invalid First Name.</div>
+          <div *ngIf="prenom.errors?.minlength">First Name is too short.</div>
+          <div *ngIf="prenom.errors?.maxlength">First Name is too long.</div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <label for="nom" class="form-label">Last Name</label>
+        <input type="text" name="nom" [(ngModel)]="medecin.nom" class="form-control" id="nom" required #nom="ngModel"
+        pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+" 
+        minlength="2" 
+        maxlength="30">
+        <!-- Error message -->
+        <div *ngIf="nom.invalid && (nom.dirty || nom.touched)" class="text-danger mt-1">
+          <div *ngIf="nom.errors?.required">Last Name is required.</div>
+          <div *ngIf="nom.errors?.pattern">Invalid Last Name.</div>
+          <div *ngIf="nom.errors?.minlength">Last Name is too short.</div>
+          <div *ngIf="nom.errors?.maxlength">Last Name is too long.</div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6">
+        <label for="specialite" class="form-label">Specialty</label>
+        <select 
+          name="specialite" 
+          [(ngModel)]="medecin.specialite" 
+          class="form-select" 
+          id="specialite"
+          #specialite="ngModel">
+          <option value="" disabled selected>Select Specialty</option>
+          <option *ngFor="let specialty of specialites" [ngValue]="specialty">{{ specialty }}</option>
+        </select>
+        <!-- Error message -->
+        <div *ngIf="!medecin.specialite  && specialite.touched" class="text-danger mt-1">
+          <div>You must select a specialty</div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6">
+        <label for="anneesExperience" class="form-label">Years of Experience</label>
+        <input 
+          type="number" 
+          name="anneesExperience" 
+          [(ngModel)]="medecin.anneesExperience" 
+          class="form-control" 
+          id="anneesExperience" 
+          required 
+          #anneesExperience="ngModel"
+          min="0"
+          max="100">
+        <!-- Error message -->
+        <div *ngIf="anneesExperience.invalid && (anneesExperience.dirty || anneesExperience.touched)" class="text-danger mt-1">
+          <div *ngIf="anneesExperience.errors.required">Years of Experience is required.</div>
+          <div *ngIf="anneesExperience.errors.min">Years of Experience must be a positive number.</div>
+          <div *ngIf="anneesExperience.errors.max">Years of Experience cannot exceed 100.</div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <label for="specialite" class="form-label">Service ID</label>
+        <select 
+          name="idService" 
+          [(ngModel)]="selectedService" 
+          class="form-select" 
+          id="idService"
+          #idService="ngModel">
+          <option value="" disabled selected>Select Service</option>
+          <option *ngFor="let service of services" [ngValue]="service">{{ service.idService }} : {{service.nomService}}</option>
+        </select>
+        <!-- Error message -->
+        <div *ngIf="!selectedService  && idService.touched" class="text-danger mt-1">
+          <div>You must select a a service ID</div>
+        </div>
+      </div>
+
+
+      
+      <div class="button-group">
+        <button type="submit" class="btn btn-primary custom-width" [disabled]="!addForm.valid">Add</button>
+          <button routerLink="/medecins" class="btn btn-danger custom-width">Cancel</button>
+    </div>
+    </form>
+  </div>
+</div>
+

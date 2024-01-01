@@ -1,0 +1,65 @@
+/* Additional styling for the delete component */
+h2 {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.card {
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card-body p {
+  font-size: 1.1rem;
+}
+.btn-container {
+  margin-top: 2rem;
+} 
+button {
+  font-size: 1.2em; 
+  padding: 8px 15px; 
+}
+.btn-primary {
+  margin-right: 2rem;
+}
+.btn-danger {
+  margin-left: 2rem;
+  margin-top: 10px;
+}
+
+
+.btn-delete {
+  margin-right: 10px;
+}
+
+
+.success-message {
+  background-color: #4caf50; 
+  color: white; 
+  border-radius: 4px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  padding: 10px 20px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 1.5rem;
+}
+
+
+::ng-deep .mat-snack-bar-container {
+  max-width: 400px;
+  margin: 0 auto; 
+}
+

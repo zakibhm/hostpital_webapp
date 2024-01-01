@@ -1,0 +1,45 @@
+/* Additional styling for the form */
+h2 {
+  margin-top: 5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+
+}
+
+.card {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 5%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+label {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+
+/* Customize form inputs */
+input[type='text'],
+input[type='number'] {
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.button-group {
+  display: flex;
+  margin-top: 7rem;
+  justify-content: center;
+}
+.button-group button {
+  margin: 0 8rem;
+}
+.btn {
+  font-size: 1.3em; 
+  padding: 10px 15px; 
+}
+.btn-primary {
+  padding: 10px 30px;
+}

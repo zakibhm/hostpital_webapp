@@ -1,0 +1,44 @@
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  background-image:url(src/Assets/img/img2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.course-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 4rem; 
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 6rem; 
+  font-weight: bold;
+  margin-bottom: 8rem;
+}
+h1 span {
+  color: rgb(23, 141, 187);
+  font-style: italic;
+}
+
+button.btn {
+  width: 30%;
+  margin-top: 20px; 
+  color: #fff;
+  font-size: 1.3em; 
+  padding: 10px 15px; 
+  font-weight: bold;
+  background-color: rgb(23, 141, 187);
+  transition: background-color 0.6s ease;
+}
+
+
+button.btn:hover {
+  background-color: rgb(13, 83, 111);
+  color: #fff;
+}

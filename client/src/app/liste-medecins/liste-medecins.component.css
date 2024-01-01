@@ -1,0 +1,103 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+.content-container {
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; 
+  overflow: auto; 
+  padding: 20px;
+}
+
+.list-container {
+  margin: auto;
+  margin-top: 4rem;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-container h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px 10px rgba(141, 138, 138, 0.2);
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+table thead tr {
+  background-color: rgb(23, 141, 187);
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+table thead tr th:last-child {
+  text-align: center;
+}
+
+table th,
+table td {
+  padding: 10px 12px;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px; 
+}
+
+table tbody tr:last-child {
+  border-bottom: 3px solid rgb(23, 141, 187);
+}
+table tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+}
+.delete-btn {
+  transition: background-color 0.6s ease;
+}
+.delete-btn:hover {
+  background-color: #a51616;
+  color: #fff;
+}
+.update-btn {
+  margin-right: 1rem;
+  transition: background-color 0.6s ease;
+}
+.update-btn:hover {
+  background-color: rgb(65, 28, 133);
+}
+
+.add-button {
+  font-size: 1.1rem;
+  padding: 8px 15px;
+  margin-top: 1.5rem;
+  text-align: center;
+  width: 25%;
+  font-weight : bold;
+  transition: background-color 0.6s ease;
+}
+.add-button:hover {
+  background-color: rgb(23, 141, 187);
+  color: #fff;
+}
